@@ -18,11 +18,7 @@ $meli = new Meli(array(
 
 $userID = $meli->initConnect();
 
-if ($userID) {
-    pass;
-}
-
-else{ ?>
+if (!$userID) { ?>
 
   <div>
    <p> Login using OAuth 2.0 handled by the PHP SDK: </p>
@@ -53,13 +49,15 @@ function vitrine_mercadolivre($args) {
 
     print $args['before_widget'];
     print $args['before_title']."Vitrine Mercado Livre".$args['after_title'];
-    
+    print "<div style='text-align:center;margin:0 auto;'>";
+
     foreach ($infos as $info) {
 
-        print "<div class='title_vitrine'>".$info['title']."</div>";
+        print "<div style='font-size: 15px;font-family:Arial;font-weight:bold;'>".$info['title']."</div>";
         print "<a href='".$info['permalink']."' title='".$info['title']."' target='blank_'><img src=".$info['thumbnail']."/></a><br />";
-        print "<div class='price_vitrine'>R$ ".$info['price'].",00</div>";
+        print "<div style='margin-bottom:10px;'>R$ ".$info['price'].",00</div>";
     }
+    print "</div>";
     print $args['after_widget'];
 }
 
