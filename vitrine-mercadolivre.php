@@ -86,44 +86,46 @@ function vitrine_mercadolivre_cadastro() {
         $response = $meli->postWithAccessToken("/items/", $params);
     }
      ?>
-        <form name="cadastrar_produto" method="post" action="">
-            <input type="hidden" name="cadastrar_produto" value="1" />
-            <p>
-                <label for="title">Nome do Produto:</label>
-                <input type="text" name="title" maxlength="150" value="" class="widefat" />
-            </p>
-            <p>
-                <label for="category_id">Categoria:</label>
-                <input type="text" name="category_id" maxlength="50" value="" class="widefat" />
-            </p>
-            <p>
-                <label for="price">Preço:</label>
-                <input type="text" name="price" maxlength="50" value="" class="widefat" />
-            </p>
-            <p>
-                <label for="available_quantity">Quantidade:</label>
-                <input type="text" name="available_quantity" maxlength="2" value="" class="widefat" />
-            </p>
-            <p>
-                <label for="listing_type_id">Tipo de Anúncio:</label>
-                <input type="text" name="listing_type_id" maxlength="50" value="" class="widefat" />
-            </p>
-            <p>
-                <label for="condition">Status:</label>
-                <input type="text" name="condition" maxlength="50" value="" class="widefat" />
-            </p>
-            <p>
-                <label for="description">Descrição:</label>
-                <input type="text" name="description" maxlength="255" value="" class="widefat" />
-            </p>
-            <p>
-                <label for="pictures">Imagem:</label>
-                <input type="text" name="pictures" maxlength="255" value="" class="widefat" />
-            </p>
-            <p class="submit">
-                <input type="submit" name="Salvar" class="button-primary" value="<?php esc_attr_e('Salvar') ?>" />
-            </p>
-        </form>
+        <div style="width:500px;">
+            <form name="cadastrar_produto" method="post" action="">
+                <input type="hidden" name="cadastrar_produto" value="1" />
+                <p>
+                    <label for="title">Nome do Produto:</label>
+                    <input type="text" name="title" maxlength="150" value="" class="widefat" />
+                </p>
+                <p>
+                    <label for="category_id">Categoria:</label>
+                    <input type="text" name="category_id" maxlength="50" value="" class="widefat" />
+                </p>
+                <p>
+                    <label for="price">Preço:</label>
+                    <input type="text" name="price" maxlength="50" value="" class="widefat" />
+                </p>
+                <p>
+                    <label for="available_quantity">Quantidade:</label>
+                    <input type="text" name="available_quantity" maxlength="2" value="" class="widefat" />
+                </p>
+                <p>
+                    <label for="listing_type_id">Tipo de Anúncio:</label>
+                    <input type="text" name="listing_type_id" maxlength="50" value="" class="widefat" />
+                </p>
+                <p>
+                    <label for="condition">Status:</label>
+                    <input type="text" name="condition" maxlength="50" value="" class="widefat" />
+                </p>
+                <p>
+                    <label for="description">Descrição:</label>
+                    <input type="text" name="description" maxlength="255" value="" class="widefat" />
+                </p>
+                <p>
+                    <label for="pictures">Imagem:</label>
+                    <input type="text" name="pictures" maxlength="255" value="" class="widefat" />
+                </p>
+                <p class="submit">
+                    <input type="submit" name="Salvar" class="button-primary" value="<?php esc_attr_e('Salvar') ?>" />
+                </p>
+            </form>
+        <div style="width:500px;">
     <?php
 }
 
